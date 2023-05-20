@@ -1,0 +1,83 @@
+@import "../../styles/vars.scss";
+
+.quiz-container {
+  position: relative;
+  width: 50rem;
+  background: $bg;
+  border-radius: 0.4rem;
+  margin-top: 10rem;
+  padding: 3rem 6rem;
+  box-sizing: border-box;
+
+  .active-question-no {
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: $primary;
+  }
+
+  .total-question {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $disabled;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  ul {
+    margin-top: 2rem;
+    margin-left: -4rem;
+
+    li {
+      text-decoration: none;
+      list-style: none;
+      color: $foreground;
+      font-size: 1.6rem;
+      background: $bg;
+      border: 1px solid $disabled;
+      border-radius: 1.6rem;
+      padding: 1.1rem;
+      margin-top: 1.5rem;
+      cursor: pointer;
+    }
+    .selected-answer {
+      background: $primary;
+      border: 1px solid $accent;
+      color: $bg;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  button {
+    background: linear-gradient(0deg, $primary 0.03%, $accent);
+    border-radius: 9px;
+    font-size: 1.8rem;
+    color: $bg;
+    padding: 1rem 4.2rem;
+    outline: none;
+    border: none;
+    margin-top: 1.5rem;
+    cursor: pointer;
+
+    &:disabled {
+      background: $bg-accent;
+      color: $disabled;
+      cursor: not-allowed;
+    }
+  }
+
+  input {
+    border: 1px solid $disabled;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    width: 100%;
+    margin-top: 2rem;
+    box-sizing: border-box;
+  }
+}
